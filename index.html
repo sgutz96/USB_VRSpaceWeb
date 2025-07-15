@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Basic Three.js App</title>
+    <style>
+      html, body { margin: 0; padding: 0; overflow: hidden; }
+
+      .puntero{
+        color: white;
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        z-index: 5;
+        font-size: 1.5cm;
+      }
+
+      .a{left: 25% }
+      .b{left: 75% }
+
+
+
+    </style>
+
+  </head>
+  <body>
+  <button onclick="openFullscreen();">Open Fullscreen</button>
+
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/108/three.min.js"></script>
+  	<script src="js/OBJLoader.js"></script>
+  	<script src="js/StereoEffect.js"></script>
+    <script src="js/entorno.js"></script>
+  	<script src="js/jugador.js"></script>
+  	<script src="js/enemigo.js"></script>
+  	<script src="js/controles.js"></script>
+  	<script src="js/reglas.js"></script>
+  	<script src="js/main.js"></script> 
+
+    
+    <div class="puntero a">+</div>	
+    <div class="puntero b">+</div> 
+
+<script>
+var elem = document.documentElement;
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.mozRequestFullScreen) { /* Firefox */
+    elem.mozRequestFullScreen();
+  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+    elem.msRequestFullscreen();
+  }
+}
+
+
+</script>
+
+
+
+
+  </body>
+</html>
